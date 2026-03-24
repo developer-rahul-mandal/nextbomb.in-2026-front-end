@@ -1,0 +1,24 @@
+// Design tokens shared across every route and component.
+
+:root {
+  --bg: #f4ede3;
+  --bg-strong: #ead9c6;
+  --surface: rgba(255, 250, 242, 0.88);
+  --surface-solid: #fffaf2;
+  --surface-dark: #1f2530;
+  --surface-dark-soft: #293241;
+  --line: rgba(74, 52, 31, 0.16);
+  --text: #201a17;
+  --muted: #6a5f58;
+  --accent: #b5512c;
+  --accent-strong: #8c381c;
+  --accent-soft: #f7d5bf;
+  --success-soft: #dce9dd;
+  --shadow: 0 24px 60px rgba(46, 28, 18, 0.12);
+  --shadow-soft: 0 14px 34px rgba(46, 28, 18, 0.08);
+  --radius-xl: 32px;
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 14px;
+  --page-width: min(1160px, calc(100% - 2rem));
+}

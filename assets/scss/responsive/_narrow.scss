@@ -1,0 +1,33 @@
+// Extra-tight layout tweaks for very narrow devices.
+
+@media (max-width: 460px) {
+  .brand {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .brand img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .brand-copy strong {
+    font-size: 0.92rem;
+    letter-spacing: 0.14em;
+  }
+
+  .hero-visual {
+    min-height: 310px;
+  }
+
+  .hero-card-accent {
+    width: 46%;
+  }
+
+  .section-heading h2,
+  .steps-panel h3,
+  .control-panel h2,
+  .cta-band a {
+    line-height: 1.05;
+  }
+}

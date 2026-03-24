@@ -1,0 +1,179 @@
+// Shared content cards, tool grid, section headings, and FAQ blocks.
+
+.content-section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+}
+
+.section-heading {
+  display: grid;
+  gap: 0.8rem;
+  margin-bottom: 1.75rem;
+}
+
+.section-heading h2 {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
+  font-weight: 400;
+}
+
+.section-heading h2 span {
+  color: var(--accent);
+}
+
+.section-heading p {
+  max-width: 68ch;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.tool-card {
+  display: grid;
+  align-content: start;
+  position: relative;
+  overflow: hidden;
+  gap: 0.9rem;
+  min-height: 100%;
+  padding: 1.5rem;
+  border: 1px solid rgba(181, 81, 44, 0.12);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.74);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.tool-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(181, 81, 44, 0.1), transparent 45%);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.tool-card:hover,
+.tool-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: rgba(181, 81, 44, 0.28);
+  box-shadow: var(--shadow-soft);
+  outline: none;
+}
+
+.tool-card:hover::before,
+.tool-card:focus-visible::before {
+  opacity: 1;
+}
+
+.tool-card h4 {
+  margin: 0;
+  font-size: 1.16rem;
+}
+
+.tool-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.tool-card span {
+  align-self: end;
+  margin-top: 0.45rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.tool-card span::after {
+  content: " ->";
+  display: inline-block;
+  margin-left: 0.1rem;
+  transition: transform 180ms ease;
+}
+
+.tool-card:hover span::after,
+.tool-card:focus-visible span::after {
+  transform: translateX(4px);
+}
+
+.tool-card-accent {
+  background:
+    linear-gradient(180deg, rgba(181, 81, 44, 0.08), rgba(255, 255, 255, 0.8)),
+    rgba(255, 255, 255, 0.74);
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.faq-item {
+  overflow: hidden;
+  border: 1px solid rgba(181, 81, 44, 0.12);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.78);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(181, 81, 44, 0.22);
+}
+
+.faq-item[open] {
+  border-color: rgba(181, 81, 44, 0.24);
+  box-shadow: var(--shadow-soft);
+}
+
+.faq-item summary {
+  position: relative;
+  padding: 1.25rem 3.8rem 1.25rem 1.3rem;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::before,
+.faq-item summary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1.3rem;
+  width: 16px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--accent);
+  transform: translateY(-50%);
+}
+
+.faq-item summary::after {
+  transform: translateY(-50%) rotate(90deg);
+  transition: transform 180ms ease;
+}
+
+.faq-item[open] summary::after {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 0 1.3rem 1.3rem;
+  color: var(--muted);
+  line-height: 1.8;
+}

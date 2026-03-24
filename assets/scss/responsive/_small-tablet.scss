@@ -1,0 +1,110 @@
+// Small-tablet and large-phone layout collapses for dense content grids.
+
+@media (max-width: 820px) {
+  main {
+    padding-top: 2.5rem;
+  }
+
+  .contact-form-grid,
+  .contact-social-grid,
+  .about-value-grid,
+  .about-stat-grid,
+  .protect-form-grid,
+  .protect-step-grid,
+  .protect-stat-grid,
+  .protect-tip-grid,
+  .protect-faq-grid,
+  .donation-summary-grid,
+  .donation-ngo-grid,
+  .donation-receipt-grid,
+  .donation-gallery-grid,
+  .legal-summary-grid,
+  .legal-topic-grid,
+  .live-stats-grid,
+  .live-dashboard-grid,
+  .live-trend-grid,
+  .tools-landing-grid,
+  .tool-note-grid,
+  .legal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .legal-sidebar {
+    position: static;
+  }
+
+  .hero-section,
+  .contact-home-hero,
+  .about-home-hero,
+  .protect-home-hero,
+  .donations-home-hero,
+  .legal-home-hero,
+  .stats-home-hero,
+  .tools-home-hero,
+  .experience-grid,
+  .tool-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section {
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+
+  .hero-copy h1 {
+    max-width: 100%;
+  }
+
+  .hero-visual {
+    min-height: 430px;
+  }
+
+  .hero-card-main {
+    inset: 0 10% 4% 0;
+  }
+
+  .hero-card-accent {
+    width: min(46%, 220px);
+  }
+
+  .cta-band-copy {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .legal-support-band {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tools-support-band {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .stats-support-band {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .donation-support-band {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .contact-support-band,
+  .about-support-band {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .protect-support-band {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .donation-modal-grid {
+    grid-template-columns: 1fr;
+  }
+}

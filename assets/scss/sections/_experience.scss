@@ -1,0 +1,197 @@
+// Homepage experience area with the control panel and guided steps.
+
+.experience-section {
+  padding: 0 0 4.5rem;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.control-panel,
+.steps-panel,
+.content-section,
+.cta-band,
+.site-footer {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow-soft);
+}
+
+.control-panel,
+.steps-panel {
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+}
+
+.control-panel {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 12rem),
+    linear-gradient(180deg, var(--surface-dark) 0%, var(--surface-dark-soft) 100%);
+  color: #fef8f1;
+}
+
+.control-panel h2 {
+  margin: 0 0 1.5rem;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(2.1rem, 4vw, 3.25rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.pro-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.15rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.07);
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.pro-box:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.12);
+}
+
+.pro-copy h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.pro-copy p {
+  margin: 0.35rem 0 0;
+  color: rgba(254, 248, 241, 0.74);
+  line-height: 1.6;
+}
+
+.phone-field {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.95rem;
+  margin-top: 1.25rem;
+  padding: 0.55rem 0.55rem 0.55rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.phone-field:focus-within {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.16);
+}
+
+.country-code {
+  color: rgba(254, 248, 241, 0.84);
+  font-weight: 700;
+}
+
+.phone-field input {
+  width: 100%;
+  min-width: 0;
+  padding: 0.85rem 1rem;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.phone-field input::placeholder {
+  color: rgba(254, 248, 241, 0.52);
+}
+
+.phone-field input:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.35);
+  outline-offset: 0;
+}
+
+.control-panel .button-wide {
+  margin-top: 1.25rem;
+}
+
+.warning-box {
+  margin-top: 1.25rem;
+  padding: 1.15rem 1.2rem;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.warning-box h4 {
+  margin: 0 0 0.45rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.warning-box p {
+  margin: 0;
+  color: rgba(254, 248, 241, 0.78);
+  line-height: 1.7;
+}
+
+.steps-panel {
+  background: var(--surface);
+}
+
+.steps-panel h3 {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+}
+
+.steps-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.step-card {
+  position: relative;
+  padding: 1.4rem 1.4rem 1.4rem 1.55rem;
+  border: 1px solid rgba(181, 81, 44, 0.14);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.74);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.step-card::before {
+  content: "";
+  position: absolute;
+  inset: 1rem auto 1rem 0;
+  width: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--accent), transparent);
+}
+
+.step-card h4 {
+  margin: 0;
+  font-size: 1.08rem;
+}
+
+.step-card p {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(181, 81, 44, 0.24);
+  box-shadow: var(--shadow-soft);
+}

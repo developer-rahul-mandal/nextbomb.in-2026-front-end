@@ -1,0 +1,208 @@
+// Hero layout, shared CTA buttons, and the layered image stack.
+
+main {
+  padding: 3.5rem 0 2rem;
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 2.5rem;
+  align-items: center;
+  padding: 3.5rem 0 4.5rem;
+}
+
+.hero-copy h1,
+.section-heading h2,
+.steps-panel h3 {
+  margin: 0;
+  color: var(--text);
+  line-height: 0.98;
+}
+
+.hero-copy h1 {
+  max-width: 11ch;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(3.4rem, 7vw, 6.7rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.hero-copy p {
+  max-width: 56ch;
+  margin: 1.35rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 0.65rem;
+  overflow: hidden;
+  min-height: 54px;
+  padding: 0.95rem 1.4rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -140%;
+  width: 48%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: skewX(-18deg);
+  transition: left 420ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.button:hover::after,
+.button:focus-visible::after {
+  left: 160%;
+}
+
+.button-icon,
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.button-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  transition: transform 180ms ease;
+}
+
+.button:hover .button-icon,
+.button:focus-visible .button-icon {
+  transform: translateY(-1px) scale(1.06);
+}
+
+.button-icon svg,
+.social-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.button-primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+  box-shadow: 0 16px 30px rgba(181, 81, 44, 0.22);
+}
+
+.button-secondary {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.66);
+  border-color: rgba(181, 81, 44, 0.18);
+}
+
+.button-premium {
+  color: #2a170d;
+  border-color: rgba(255, 255, 255, 0.48);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.06)),
+    linear-gradient(135deg, #f5d996 0%, #e9ba6d 42%, #c56734 100%);
+  box-shadow: 0 18px 36px rgba(181, 81, 44, 0.24);
+}
+
+.button-premium:hover,
+.button-premium:focus-visible {
+  box-shadow: 0 22px 42px rgba(181, 81, 44, 0.28);
+}
+
+.button-compact {
+  min-height: 48px;
+  flex-shrink: 0;
+  min-width: fit-content;
+  padding-inline: 1.15rem;
+}
+
+.button-wide {
+  width: 100%;
+}
+
+/* The image stack uses only CSS transforms so it stays stable across breakpoints. */
+.hero-visual {
+  position: relative;
+  min-height: 560px;
+}
+
+.hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: 8% 10% 18% 2%;
+  border-radius: 42px;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.18)),
+    linear-gradient(180deg, rgba(181, 81, 44, 0.16), rgba(32, 88, 102, 0.12));
+  filter: blur(0);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.hero-card {
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  background: rgba(255, 255, 255, 0.76);
+  transition:
+    box-shadow 220ms ease,
+    transform 220ms ease;
+}
+
+.hero-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-card-main {
+  inset: 0 8% 6% 0;
+  animation: heroCardMainFloat 8s ease-in-out infinite;
+}
+
+.hero-card-accent {
+  right: 0;
+  bottom: 8%;
+  width: min(42%, 240px);
+  aspect-ratio: 0.82;
+  animation: heroCardAccentFloat 7s ease-in-out infinite;
+}
+
+.hero-visual:hover .hero-card {
+  box-shadow: 0 30px 72px rgba(46, 28, 18, 0.18);
+}

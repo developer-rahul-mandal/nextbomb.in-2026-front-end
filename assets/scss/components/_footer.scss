@@ -1,0 +1,116 @@
+// Footer layout, social links, and closing brand actions.
+
+.site-footer {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: calc(var(--radius-xl) + 4px);
+  color: rgba(254, 248, 241, 0.9);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 16rem),
+    linear-gradient(180deg, #1e232d 0%, #141922 100%);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr;
+  gap: 1.5rem;
+}
+
+.brand-footer {
+  margin-bottom: 1rem;
+}
+
+.brand-footer .brand-copy span,
+.footer-description,
+.footer-column a,
+.footer-meta,
+.social-links a {
+  color: rgba(254, 248, 241, 0.7);
+  overflow-wrap: anywhere;
+}
+
+.footer-description {
+  max-width: 28ch;
+  margin: 0 0 1rem;
+  line-height: 1.8;
+}
+
+.footer-telegram {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 48px;
+  padding: 0.8rem 1.15rem;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+}
+
+.footer-column {
+  display: grid;
+  align-content: start;
+  gap: 0.7rem;
+}
+
+.footer-column h4 {
+  margin: 0.1rem 0 0.2rem;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-column a:hover,
+.footer-column a:focus-visible,
+.social-links a:hover,
+.social-links a:focus-visible {
+  color: #fff;
+  outline: none;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  min-width: 0;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.social-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible,
+.footer-telegram:hover,
+.footer-telegram:focus-visible {
+  transform: translateY(-2px);
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.footer-meta {
+  margin: 1.8rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.95rem;
+}

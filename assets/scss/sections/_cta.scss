@@ -1,0 +1,48 @@
+// Reusable CTA band that bridges major content sections.
+
+.cta-band {
+  margin-bottom: 4.5rem;
+  padding: 1.75rem 2rem;
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(135deg, rgba(181, 81, 44, 0.14), rgba(181, 81, 44, 0.02)),
+    var(--surface-solid);
+}
+
+.cta-band-copy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cta-band a {
+  position: relative;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.cta-band a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.18em;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  transform: scaleX(0.28);
+  transform-origin: left center;
+  transition: transform 220ms ease;
+}
+
+.cta-band a:hover::after,
+.cta-band a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.cta-band small {
+  color: var(--muted);
+  font-size: 1rem;
+}

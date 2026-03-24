@@ -1,0 +1,17 @@
+// Top-level page shell and max-width wrappers used across the site.
+
+.page-shell {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+}
+
+.site-header,
+.hero-section,
+.experience-section,
+.content-section,
+.cta-band,
+.site-footer {
+  width: var(--page-width);
+  margin-inline: auto;
+}

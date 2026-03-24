@@ -1,0 +1,311 @@
+// Donation summaries, receipt/gallery cards, and modal presentation.
+
+/* The donations page turns the old gallery into the current card-based homepage theme. */
+.donations-page-main {
+  display: grid;
+  gap: 2rem;
+}
+
+.donations-home-hero {
+  align-items: start;
+  padding-bottom: 2.5rem;
+}
+
+.donations-home-copy h1 {
+  max-width: 9ch;
+}
+
+.donations-home-copy p {
+  max-width: 58ch;
+}
+
+.donation-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.donation-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0.65rem 0.95rem;
+  border: 1px solid rgba(181, 81, 44, 0.12);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.72);
+  font-weight: 700;
+}
+
+.donations-hero-panel {
+  align-self: stretch;
+}
+
+.donation-summary-grid,
+.donation-ngo-grid,
+.donation-receipt-grid,
+.donation-gallery-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.donation-summary-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.donation-ngo-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.donation-receipt-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.donation-gallery-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.donation-summary-card,
+.donation-ngo-card,
+.donation-receipt-card,
+.donation-gallery-card {
+  overflow: hidden;
+  border: 1px solid rgba(181, 81, 44, 0.12);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.donation-summary-card:hover,
+.donation-ngo-card:hover,
+.donation-receipt-card:hover,
+.donation-gallery-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(181, 81, 44, 0.24);
+  box-shadow: var(--shadow);
+}
+
+.donation-summary-card,
+.donation-ngo-card {
+  padding: 1.4rem;
+}
+
+.donation-summary-card span,
+.donation-ngo-card span,
+.donation-gallery-copy p,
+.donation-receipt-copy p,
+.donation-status,
+.donation-modal-copy p {
+  color: var(--muted);
+}
+
+.donation-summary-card strong {
+  display: block;
+  margin-top: 0.7rem;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1;
+}
+
+.donation-summary-card h3,
+.donation-ngo-card h3,
+.donation-gallery-copy h3,
+.donation-receipt-copy h3,
+.donation-support-copy h2,
+.donation-modal-copy h3 {
+  margin: 0;
+}
+
+.donation-summary-card p,
+.donation-ngo-card p,
+.donation-support-copy p {
+  margin: 0.65rem 0 0;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.donation-ngo-card a,
+.donation-receipt-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1rem;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.donation-ngo-card a::after,
+.donation-receipt-link::after {
+  content: "->";
+  transition: transform 180ms ease;
+}
+
+.donation-ngo-card:hover a::after,
+.donation-receipt-card:hover .donation-receipt-link::after {
+  transform: translateX(3px);
+}
+
+.donation-receipt-button,
+.donation-gallery-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  text-align: left;
+  background: transparent;
+  cursor: pointer;
+}
+
+.donation-receipt-button:focus-visible,
+.donation-gallery-button:focus-visible,
+.donation-modal-close:focus-visible {
+  outline: 2px solid rgba(181, 81, 44, 0.28);
+  outline-offset: 4px;
+}
+
+.donation-receipt-image,
+.donation-gallery-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 260ms ease;
+}
+
+.donation-receipt-card:hover .donation-receipt-image,
+.donation-gallery-card:hover .donation-gallery-image {
+  transform: scale(1.03);
+}
+
+.donation-receipt-copy,
+.donation-gallery-copy {
+  padding: 1.1rem 1.2rem 1.2rem;
+}
+
+.donation-receipt-copy p,
+.donation-gallery-copy p {
+  margin: 0.55rem 0 0;
+  line-height: 1.7;
+}
+
+.donation-receipt-amount {
+  display: inline-flex;
+  margin-top: 0.75rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  color: #7f3e22;
+  font-weight: 700;
+  background: rgba(181, 81, 44, 0.1);
+}
+
+.donation-status {
+  margin: 1rem 0 0;
+  font-size: 0.98rem;
+}
+
+.donation-gallery-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.donation-support-band {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.donation-support-copy {
+  max-width: 42rem;
+}
+
+.donation-support-copy h2 {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.donation-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: rgba(17, 14, 12, 0.76);
+  backdrop-filter: blur(16px);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 180ms ease,
+    visibility 180ms ease;
+}
+
+.donation-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.donation-modal-dialog {
+  position: relative;
+  width: min(980px, 100%);
+  max-height: calc(100vh - 2.5rem);
+  overflow: auto;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: calc(var(--radius-xl) + 4px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04)),
+    rgba(26, 22, 18, 0.94);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.donation-modal-close {
+  position: sticky;
+  top: 0.5rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-left: auto;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+.donation-modal-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  align-items: start;
+}
+
+.donation-modal-image {
+  width: 100%;
+  border-radius: calc(var(--radius-lg) + 2px);
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.donation-modal-copy {
+  padding: 0.6rem 0.4rem 0.4rem;
+  color: #fff;
+}
+
+.donation-modal-copy p {
+  margin: 0.7rem 0 0;
+  line-height: 1.75;
+}

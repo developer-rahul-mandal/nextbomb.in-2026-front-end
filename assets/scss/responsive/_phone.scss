@@ -1,0 +1,142 @@
+// Phone-sized spacing, sizing, and stack adjustments for narrow screens.
+
+@media (max-width: 640px) {
+  :root {
+    --page-width: calc(100% - 1.25rem);
+  }
+
+  .site-header,
+  .content-section,
+  .cta-band,
+  .site-footer,
+  .legal-hero,
+  .legal-sidebar,
+  .legal-content,
+  .control-panel,
+  .steps-panel {
+    padding: 1.25rem;
+  }
+
+  .site-header {
+    justify-items: stretch;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.7rem, 15vw, 4rem);
+  }
+
+  .legal-home-copy h1,
+  .contact-home-copy h1,
+  .about-home-copy h1,
+  .protect-home-copy h1,
+  .donations-home-copy h1,
+  .stats-home-copy h1,
+  .tools-home-copy h1,
+  .legal-support-copy h2 {
+    max-width: 100%;
+  }
+
+  .tools-support-copy h2 {
+    max-width: 100%;
+  }
+
+  .stats-support-copy h2 {
+    max-width: 100%;
+  }
+
+  .donation-support-copy h2 {
+    max-width: 100%;
+  }
+
+  .contact-support-copy h2,
+  .about-support-copy h2 {
+    max-width: 100%;
+  }
+
+  .protect-support-copy h2 {
+    max-width: 100%;
+  }
+
+  .live-panel-toolbar {
+    align-items: stretch;
+  }
+
+  .live-panel-toolbar .button {
+    width: 100%;
+  }
+
+  .simulation-field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-modal {
+    padding: 0.75rem;
+  }
+
+  .donation-modal-dialog {
+    padding: 0.75rem;
+  }
+
+  .hero-copy p,
+  .section-heading p,
+  .legal-hero p,
+  .step-card p,
+  .faq-item p,
+  .warning-box p {
+    line-height: 1.65;
+  }
+
+  .hero-actions,
+  .legal-actions,
+  .cta-band-copy,
+  .social-links {
+    width: 100%;
+  }
+
+  .hero-actions .button,
+  .legal-actions .button {
+    width: 100%;
+  }
+
+  .hero-visual {
+    min-height: 360px;
+  }
+
+  .hero-card-main {
+    right: 4%;
+    transform: rotate(-3deg);
+  }
+
+  .hero-card-accent {
+    width: 42%;
+    bottom: 6%;
+    transform: rotate(5deg);
+  }
+
+  .pro-box {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .phone-field {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.7rem;
+    padding: 0.45rem 0.45rem 0.45rem 0.85rem;
+  }
+
+  .country-code {
+    font-size: 0.95rem;
+  }
+
+  .phone-field {
+    border-radius: var(--radius-lg);
+  }
+
+  .phone-field input {
+    padding-left: 0.95rem;
+  }
+}

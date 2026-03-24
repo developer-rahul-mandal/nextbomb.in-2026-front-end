@@ -1,0 +1,46 @@
+// Large-tablet breakpoint adjustments before the full mobile nav kicks in.
+
+@media (max-width: 1080px) {
+  .hero-section,
+  .experience-grid,
+  .footer-grid,
+  .tool-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .simulation-field-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .donation-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .donation-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-grid,
+  .about-story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stat-grid,
+  .contact-social-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .protect-action-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .protect-step-grid,
+  .protect-stat-grid,
+  .protect-faq-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

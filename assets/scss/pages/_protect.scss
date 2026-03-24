@@ -1,0 +1,199 @@
+// Protect-number flow, action cards, FAQs, and support CTA styles.
+
+/* The protect page adds a defensive tool flow while staying in the same shared theme. */
+.protect-page-main {
+  display: grid;
+  gap: 2rem;
+}
+
+.protect-home-hero {
+  align-items: start;
+  padding-bottom: 2.5rem;
+}
+
+.protect-home-copy h1 {
+  max-width: 9ch;
+}
+
+.protect-home-copy p {
+  max-width: 58ch;
+}
+
+.protect-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.protect-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0.65rem 0.95rem;
+  border: 1px solid rgba(181, 81, 44, 0.12);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.72);
+  font-weight: 700;
+}
+
+.protect-hero-panel {
+  align-self: stretch;
+}
+
+.protect-action-grid,
+.protect-step-grid,
+.protect-stat-grid,
+.protect-tip-grid,
+.protect-faq-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.protect-action-grid {
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+}
+
+.protect-step-grid,
+.protect-stat-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.protect-tip-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.protect-faq-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.protect-form-card,
+.protect-note-card,
+.protect-step-card,
+.protect-stat-card,
+.protect-tip-card,
+.protect-faq-card {
+  padding: 1.4rem;
+  border: 1px solid rgba(181, 81, 44, 0.12);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.74);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.protect-form-card:hover,
+.protect-note-card:hover,
+.protect-step-card:hover,
+.protect-stat-card:hover,
+.protect-tip-card:hover,
+.protect-faq-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(181, 81, 44, 0.24);
+  box-shadow: var(--shadow-soft);
+}
+
+.protect-form-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.protect-field {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.protect-field-full {
+  grid-column: 1 / -1;
+}
+
+.protect-field span,
+.protect-form-note,
+.protect-note-card p,
+.protect-step-card p,
+.protect-stat-card p,
+.protect-tip-card p,
+.protect-faq-card p {
+  color: var(--muted);
+}
+
+.protect-field span {
+  font-weight: 700;
+}
+
+.protect-field input,
+.protect-field select,
+.protect-field textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(181, 81, 44, 0.16);
+  border-radius: 16px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.protect-field input:focus,
+.protect-field select:focus,
+.protect-field textarea:focus {
+  outline: 2px solid rgba(181, 81, 44, 0.16);
+  outline-offset: 2px;
+}
+
+.protect-form-note {
+  margin: 1rem 0 0;
+  line-height: 1.75;
+}
+
+.protect-note-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.protect-note-card h3,
+.protect-step-card h3,
+.protect-stat-card h3,
+.protect-tip-card h3,
+.protect-faq-card h3,
+.protect-support-copy h2 {
+  margin: 0;
+}
+
+.protect-note-card p,
+.protect-step-card p,
+.protect-stat-card p,
+.protect-tip-card p,
+.protect-faq-card p,
+.protect-support-copy p {
+  margin: 0.65rem 0 0;
+  line-height: 1.75;
+}
+
+.protect-stat-card strong {
+  display: block;
+  margin-top: 0.7rem;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1;
+}
+
+.protect-support-band {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.protect-support-copy {
+  max-width: 42rem;
+}
+
+.protect-support-copy h2 {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1;
+}

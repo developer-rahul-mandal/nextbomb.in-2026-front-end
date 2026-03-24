@@ -1,0 +1,109 @@
+// Tools landing page hero, support copy, and supporting note cards.
+
+/* The tools landing page keeps the home page rhythm with a hero, tool grid, and support CTA. */
+.tools-page-main {
+  display: grid;
+  gap: 2rem;
+}
+
+.tools-home-hero {
+  align-items: start;
+  padding-bottom: 2.5rem;
+}
+
+.tools-home-copy h1 {
+  max-width: 8ch;
+}
+
+.tools-home-copy p {
+  max-width: 58ch;
+}
+
+.tool-stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.tool-stat-card {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0.65rem 0.95rem;
+  border: 1px solid rgba(181, 81, 44, 0.12);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.72);
+  font-weight: 700;
+}
+
+.tools-hero-panel {
+  align-self: stretch;
+}
+
+.tools-home-section {
+  margin-bottom: 0;
+}
+
+.tools-landing-grid,
+.tool-note-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.tools-landing-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tool-note-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tool-note-card {
+  padding: 1.4rem;
+  border: 1px solid rgba(181, 81, 44, 0.12);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.74);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.tool-note-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(181, 81, 44, 0.24);
+  box-shadow: var(--shadow-soft);
+}
+
+.tool-note-card h3,
+.tools-support-copy h2 {
+  margin: 0;
+}
+
+.tool-note-card p,
+.tools-support-copy p {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.tools-support-band {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.tools-support-copy {
+  max-width: 42rem;
+}
+
+.tools-support-copy h2 {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1;
+}

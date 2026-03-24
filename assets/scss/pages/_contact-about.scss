@@ -1,0 +1,273 @@
+// Contact and about page variants that share cards, grids, and support blocks.
+
+/* Contact and about pages extend the same hero/card rhythm used across the themed routes. */
+.contact-page-main,
+.about-page-main {
+  display: grid;
+  gap: 2rem;
+}
+
+.contact-home-hero,
+.about-home-hero {
+  align-items: start;
+  padding-bottom: 2.5rem;
+}
+
+.contact-home-copy h1,
+.about-home-copy h1 {
+  max-width: 8ch;
+}
+
+.contact-home-copy p,
+.about-home-copy p {
+  max-width: 58ch;
+}
+
+.contact-meta-row,
+.about-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.contact-meta-pill,
+.about-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0.65rem 0.95rem;
+  border: 1px solid rgba(181, 81, 44, 0.12);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.72);
+  font-weight: 700;
+}
+
+.contact-hero-panel,
+.about-hero-panel {
+  align-self: stretch;
+}
+
+.contact-grid,
+.about-story-grid,
+.about-value-grid,
+.about-stat-grid,
+.contact-social-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-grid,
+.about-story-grid {
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+}
+
+.about-value-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about-stat-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.contact-social-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.contact-form-card,
+.contact-info-card,
+.contact-note-card,
+.contact-social-card,
+.about-card,
+.about-value-card,
+.about-stat-card {
+  padding: 1.4rem;
+  border: 1px solid rgba(181, 81, 44, 0.12);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.74);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.contact-form-card:hover,
+.contact-info-card:hover,
+.contact-note-card:hover,
+.contact-social-card:hover,
+.about-card:hover,
+.about-value-card:hover,
+.about-stat-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(181, 81, 44, 0.24);
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-form-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.contact-field-full {
+  grid-column: 1 / -1;
+}
+
+.contact-field span,
+.contact-channel p,
+.contact-form-note,
+.contact-social-card p,
+.about-card p,
+.about-value-card p,
+.about-stat-card p {
+  color: var(--muted);
+}
+
+.contact-field span {
+  font-weight: 700;
+}
+
+.contact-field input,
+.contact-field textarea,
+.contact-field select {
+  width: 100%;
+  min-height: 52px;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(181, 81, 44, 0.16);
+  border-radius: 16px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.contact-field textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus,
+.contact-field select:focus {
+  outline: 2px solid rgba(181, 81, 44, 0.16);
+  outline-offset: 2px;
+}
+
+.contact-form-note {
+  margin: 1rem 0 0;
+  line-height: 1.75;
+}
+
+.contact-info-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-channel-list {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.contact-channel {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem 1.05rem;
+  border: 1px solid rgba(181, 81, 44, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.contact-channel strong,
+.contact-social-card h3,
+.about-card h3,
+.about-value-card h3,
+.about-stat-card h3,
+.contact-support-copy h2,
+.about-support-copy h2 {
+  margin: 0;
+}
+
+.contact-channel a,
+.contact-social-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.contact-social-card a::after,
+.contact-channel a::after {
+  content: "->";
+  transition: transform 180ms ease;
+}
+
+.contact-social-card:hover a::after,
+.contact-channel:hover a::after {
+  transform: translateX(3px);
+}
+
+.contact-social-card p,
+.about-card p,
+.about-value-card p,
+.about-stat-card p {
+  margin: 0.65rem 0 0;
+  line-height: 1.75;
+}
+
+.contact-social-card .social-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-strong);
+  background: rgba(181, 81, 44, 0.1);
+}
+
+.contact-social-card .social-icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.about-card {
+  background:
+    linear-gradient(180deg, rgba(181, 81, 44, 0.08), rgba(255, 255, 255, 0.82)),
+    rgba(255, 255, 255, 0.74);
+}
+
+.about-stat-card strong {
+  display: block;
+  margin-top: 0.7rem;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1;
+}
+
+.contact-support-band,
+.about-support-band {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.contact-support-copy,
+.about-support-copy {
+  max-width: 42rem;
+}
+
+.contact-support-copy h2,
+.about-support-copy h2 {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1;
+}

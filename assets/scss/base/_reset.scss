@@ -1,0 +1,11 @@
+// Global reset rules and browser-wide behavior defaults.
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMS Bomber | NEXTBOMB</title>
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="Preview SMS-style flows safely with the NEXTBOMB SMS Simulator page, including a demo form, process steps, preview tips, and FAQs."
+    />
+    <link rel="stylesheet" href="../assets/css/style.css?v19" />
+    <link
+      rel="shortcut icon"
+      href="https://nextbomb.in/includes/img/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="../" aria-label="NEXTBOMB home">
+          <img
+            src="https://nextbomb.in/includes/img/logo.webp"
+            alt="Nextbomb logo"
+          />
+          <span class="brand-copy">
+            <strong>NEXTBOMB</strong>
+            <span>Fast. Safe. Powerful.</span>
+          </span>
+        </a>
+
+        <input class="nav-toggle-input" type="checkbox" id="nav-toggle" />
+        <label
+          class="mobile-nav-toggle"
+          for="nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span class="mobile-nav-label">Menu</span>
+          <span class="mobile-nav-bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </label>
+
+        <div class="header-panel">
+          <nav class="site-nav" aria-label="Primary">
+            <a class="nav-link" href="../">Home</a>
+
+            <details class="nav-group" name="primary-nav">
+              <summary>Tools</summary>
+              <div class="nav-menu">
+                <a href="../call-bomber">Call Bomber</a>
+                <a href="../sms-bomber">SMS Bomber</a>
+                <a href="../whatsapp-bomber">WhatsApp Bomber</a>
+                <a href="../protect-number">Protect Number</a>
+              </div>  
+            </details>
+
+            <details class="nav-group" name="primary-nav">
+              <summary>Info</summary>
+              <div class="nav-menu">
+                <a href="../about-us">About Us</a>
+                <a href="../our-donations">Our Donations</a>
+                <a href="../terms-of-service">Terms of Service</a>
+                <a href="../privacy-policy">Privacy Policy</a>
+                <a href="../contact-us">Contact Us</a>
+              </div>
+            </details>
+          </nav>
+
+          <a
+            class="install-link"
+            href="https://nextbomb.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Install</a
+          >
+        </div>
+      </header>
+
+      <main class="protect-page-main">
+        <section class="hero-section protect-home-hero">
+          <div class="hero-copy protect-home-copy">
+            <span class="legal-kicker">Safe Tool Preview</span>
+            <h1>SMS Simulator</h1>
+            <p>
+              Use this frontend-only simulator to preview SMS-style flows,
+              layouts, and message states without sending any real messages.
+              It follows the same homepage-inspired structure as the rest of
+              the site while staying clearly inside a safe demo boundary.
+            </p>
+
+            <div class="protect-meta-row">
+              <span class="protect-meta-pill">Frontend Only</span>
+              <span class="protect-meta-pill">Safe Preview</span>
+              <span class="protect-meta-pill">No Live Sending</span>
+            </div>
+
+            <div class="hero-actions legal-actions">
+              <a class="button button-primary" href="#simulator"
+                >Open SMS Preview</a
+              >
+              <a class="button button-secondary" href="#tips">Preview Tips</a>
+              <a class="button button-secondary" href="../contact-us"
+                >Need Support</a
+              >
+            </div>
+          </div>
+
+          <aside class="steps-panel protect-hero-panel">
+            <h3>What This Page Does</h3>
+            <div class="steps-grid">
+              <article class="step-card">
+                <h4>Preview Only</h4>
+                <p>This route is for simulated SMS flows and does not send anything live.</p>
+              </article>
+              <article class="step-card">
+                <h4>Message States</h4>
+                <p>Use it to showcase input, queue, sent, and completed-style UI states safely.</p>
+              </article>
+              <article class="step-card">
+                <h4>Demo Friendly</h4>
+                <p>It works well for design reviews, presentations, and frontend prototypes.</p>
+              </article>
+            </div>
+          </aside>
+        </section>
+
+        <section class="content-section" id="simulator">
+          <div class="section-heading">
+            <h2>Preview SMS <span>Flow</span></h2>
+            <p>
+              This route uses a safe preview form so you can show how an SMS
+              tool page could feel without triggering real delivery.
+            </p>
+          </div>
+
+          <div class="protect-action-grid">
+            <form class="control-panel" onsubmit="return false;">
+              <h2>Start Safe SMS Preview</h2>
+
+              <label class="phone-field" for="sms-preview-input">
+                <span class="country-code">+91</span>
+                <input
+                  type="text"
+                  id="sms-preview-input"
+                  placeholder="Enter phone number"
+                  pattern="[0-9]{10}"
+                  inputmode="numeric"
+                  autocomplete="tel-national"
+                  maxlength="10"
+                  aria-label="Phone number"
+                />
+              </label>
+
+              <button class="button button-primary button-wide" type="submit">
+                Start Safe Preview
+              </button>
+
+              <div class="warning-box">
+                <h4>Simulation Notice</h4>
+                <p>
+                  This page is a simulator only. It is meant for UI demos,
+                  layout previews, and frontend presentations. No real SMS is
+                  sent from this route.
+                </p>
+              </div>
+            </form>
+
+            <div class="protect-note-stack">
+              <article class="protect-note-card">
+                <h3>Template States</h3>
+                <p>
+                  Use this page to show loading, preview, delivered, and
+                  completed UI patterns in one safe route.
+                </p>
+              </article>
+
+              <article class="protect-note-card">
+                <h3>Frontend Prototype</h3>
+                <p>
+                  Connect this layout to mock data, demo counters, or a design
+                  walkthrough without touching any real messaging flow.
+                </p>
+              </article>
+
+              <article class="protect-note-card">
+                <h3>Need Support?</h3>
+                <p>
+                  If you want extra preview states or a backend-free demo data
+                  layer, the support page is the next step.
+                </p>
+                <a class="button button-secondary button-wide" href="../contact-us"
+                  >Contact Support</a
+                >
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-heading">
+            <h2>How The Simulator <span>Works</span></h2>
+            <p>
+              The simulator is arranged in the same simple four-step logic used
+              across the rest of the tool pages.
+            </p>
+          </div>
+
+          <div class="protect-step-grid">
+            <article class="protect-step-card">
+              <h3>Enter A Preview Number</h3>
+              <p>Use the number field to make the page feel like a live message-flow demo.</p>
+            </article>
+            <article class="protect-step-card">
+              <h3>Start The Simulation</h3>
+              <p>The primary action can trigger fake loading, queue, and delivery states later.</p>
+            </article>
+            <article class="protect-step-card">
+              <h3>Show Safe Statuses</h3>
+              <p>Present queued, sent, failed, or completed visuals without sending anything live.</p>
+            </article>
+            <article class="protect-step-card">
+              <h3>Review And Iterate</h3>
+              <p>Use the route for demos, content review, or future frontend iteration.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-heading">
+            <h2>Simulator <span>Snapshot</span></h2>
+            <p>
+              These cards make the simulator feel active while staying fully
+              inside a safe frontend-only boundary.
+            </p>
+          </div>
+
+          <div class="protect-stat-grid">
+            <article class="protect-stat-card">
+              <h3>Live Sends</h3>
+              <strong>0</strong>
+              <p>The route is intentionally preview-only and does not trigger real message delivery.</p>
+            </article>
+            <article class="protect-stat-card">
+              <h3>Preview Modes</h3>
+              <strong>4</strong>
+              <p>Use loading, queued, sent, and completed states to make demos feel complete.</p>
+            </article>
+            <article class="protect-stat-card">
+              <h3>Frontend Ready</h3>
+              <strong>100%</strong>
+              <p>The page is ready to pair with fake data or a visual presentation walkthrough.</p>
+            </article>
+            <article class="protect-stat-card">
+              <h3>Mobile Fit</h3>
+              <strong>Responsive</strong>
+              <p>The same shared responsive system keeps the simulator usable across device sizes.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section" id="tips">
+          <div class="section-heading">
+            <h2>Preview <span>Tips</span></h2>
+            <p>
+              These notes help keep the page positioned as a safe simulator
+              rather than a live messaging tool.
+            </p>
+          </div>
+
+          <div class="protect-tip-grid">
+            <article class="protect-tip-card">
+              <h3>Use Demo Numbers</h3>
+              <p>Keep sample data masked or obviously fictional when presenting the simulator.</p>
+            </article>
+            <article class="protect-tip-card">
+              <h3>Show Status Progress</h3>
+              <p>Fake status transitions make the page feel alive without needing a backend.</p>
+            </article>
+            <article class="protect-tip-card">
+              <h3>Use It For Reviews</h3>
+              <p>It works well for design QA, content approval, and stakeholder walkthroughs.</p>
+            </article>
+            <article class="protect-tip-card">
+              <h3>Stay In Sandbox Mode</h3>
+              <p>Keep the route frontend-only unless you have a clearly safe use case for deeper wiring.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-heading">
+            <h2>Quick <span>FAQ</span></h2>
+            <p>
+              These FAQs help explain what the simulator is for and what it is not for.
+            </p>
+          </div>
+
+          <div class="protect-faq-grid">
+            <article class="protect-faq-card">
+              <h3>Does this send real SMS?</h3>
+              <p>No. This route is intended only for frontend simulation and safe preview use.</p>
+            </article>
+            <article class="protect-faq-card">
+              <h3>Why keep a separate simulator page?</h3>
+              <p>It gives you a safe route for previews, demos, and future UI experiments.</p>
+            </article>
+            <article class="protect-faq-card">
+              <h3>Can I add fake counters later?</h3>
+              <p>Yes. This layout is a good fit for fake dashboards, loading states, and demo metrics.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="cta-band protect-support-band">
+          <div class="protect-support-copy">
+            <h2>Need more safe simulator routes?</h2>
+            <p>
+              This simulator now matches the same route family as the other
+              tool pages and is ready for more fake-state polish if you want it.
+            </p>
+          </div>
+
+          <div class="hero-actions legal-actions">
+            <a class="button button-primary" href="../tools.html">Back to Tools</a>
+            <a class="button button-secondary" href="../contact-us"
+              >Contact Support</a
+            >
+            <a class="button button-secondary" href="../">Back to Home</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="footer">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand brand-footer" href="../" aria-label="NEXTBOMB home">
+              <img
+                src="https://nextbomb.in/includes/img/logo.webp"
+                alt="Nextbomb logo"
+              />
+              <span class="brand-copy">
+                <strong>NEXTBOMB</strong>
+                <span>Fast. Safe. Powerful.</span>
+              </span>
+            </a>
+            <p class="footer-description">
+              Spread the fun, responsibly! subscribe to our telegram for the
+              latest updates and prank ideas!
+            </p>
+            <a
+              class="footer-telegram"
+              href="https://t.me/nextbomb"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="m21 4-3.7 17-5.6-4.1-3 2.9.7-5.2L4 12l17-8Z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.7"
+                  />
+                </svg>
+              </span>
+              <span>Join our Telegram</span></a
+            >
+          </div>
+
+          <div class="footer-column">
+            <h4>Our Services</h4>
+            <a href="../call-bomber">Call Bomber</a>
+            <a href="../sms-simulator">SMS Simulator</a>
+            <a href="../whatsapp-sandbox">WhatsApp Sandbox</a>
+            <a href="../protect-number">Protect Number</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Company Info</h4>
+            <a href="../about-us">About Us</a>
+            <a href="../our-donations">Our Donations</a>
+            <a href="../contact-us">Contact Us</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Legal</h4>
+            <a href="../terms-of-service">Terms of Service</a>
+            <a href="../privacy-policy">Privacy Policy</a>
+            <a href="../disclaimer">Disclaimer</a>
+
+            <h4>Social</h4>
+            <div class="social-links">
+              <a
+                href="http://facebook.com/nextbomb.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Follow us on Facebook"
+              >
+                <span class="social-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M13.6 21v-7.3h2.5l.4-3h-2.9V8.8c0-.9.2-1.5 1.5-1.5h1.6V4.7c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 4v2.1H8.3v3h2.3V21h3Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </span>
+                <span>Facebook</span></a
+              >
+              <a
+                href="http://x.com/nextbomb_in"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Follow us on x.com"
+              >
+                <span class="social-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M18.7 4H21l-5.2 5.9L22 20h-4.7l-3.7-5.8L8.5 20H6.2l5.6-6.4L6 4h4.8l3.3 5.3L18.7 4Zm-1.6 14h1.3L9.5 5.9H8.1L17.1 18Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </span>
+                <span>X</span></a
+              >
+              <a
+                href="http://instagram.com/coder.bro_"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Follow us on Instagram"
+              >
+                <span class="social-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <rect
+                      x="4.25"
+                      y="4.25"
+                      width="15.5"
+                      height="15.5"
+                      rx="4.5"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                    />
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="3.8"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                    />
+                    <circle cx="17.2" cy="6.9" r="1.1" fill="currentColor" />
+                  </svg>
+                </span>
+                <span>Instagram</span></a
+              >
+              <a
+                href="http://telegram.dog/nextbomb"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Join our Telegram Channel"
+              >
+                <span class="social-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="m21 4-3.7 17-5.6-4.1-3 2.9.7-5.2L4 12l17-8Z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.7"
+                    />
+                  </svg>
+                </span>
+                <span>Telegram</span></a
+              >
+              <a
+                href="https://github.com/developer-rahul-mandal"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Follow us on GitHub"
+              >
+                <span class="social-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M8 9 4.5 12 8 15M16 9l3.5 3-3.5 3M13.5 6l-3 12"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                    />
+                  </svg>
+                </span>
+                <span>GitHub</span></a
+              >
+              <a
+                href="https://whatsapp.com/channel/0029Va4ZPojDeON8meRB040z"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Join our WhatsApp Channel"
+              >
+                <span class="social-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 20a7.8 7.8 0 0 1-4-.9L4.5 20l1-3.4A8 8 0 1 1 12 20Z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.7"
+                    />
+                    <path
+                      d="M9.7 9.2c.3-.3.5-.3.7.1l.8 1.3c.2.3.2.5 0 .7l-.4.5c-.1.1-.1.3 0 .4.4.8 1 1.4 1.8 1.8.1.1.3.1.4 0l.5-.4c.2-.2.4-.2.7 0l1.3.8c.4.2.4.4.1.7l-.6.7c-.3.3-.8.5-1.2.4-2.9-.7-5.2-3-5.9-5.9-.1-.4.1-.9.4-1.2l.7-.6Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </span>
+                <span>WhatsApp</span></a
+              >
+            </div>
+          </div>
+        </div>
+
+        <p class="footer-meta">&copy; 2022-26 NEXTBOMB. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
+

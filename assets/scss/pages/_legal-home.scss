@@ -1,0 +1,120 @@
+// Disclaimer-style legal landing sections that reuse the home page rhythm.
+
+/* The disclaimer page reuses the homepage section language: hero, cards, and CTA band. */
+.legal-page-main {
+  display: grid;
+  gap: 2rem;
+}
+
+.legal-home-hero {
+  align-items: start;
+  padding-bottom: 2.5rem;
+}
+
+.legal-home-copy h1 {
+  max-width: 8ch;
+}
+
+.legal-home-copy p {
+  max-width: 58ch;
+}
+
+.legal-hero-panel {
+  align-self: stretch;
+}
+
+.legal-home-section {
+  margin-bottom: 0;
+}
+
+.legal-summary-grid,
+.legal-topic-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.legal-summary-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.legal-topic-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.legal-summary-card,
+.legal-topic-card {
+  padding: 1.4rem;
+  border: 1px solid rgba(181, 81, 44, 0.12);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.74);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.legal-summary-card:hover,
+.legal-topic-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(181, 81, 44, 0.24);
+  box-shadow: var(--shadow-soft);
+}
+
+.legal-summary-card h3,
+.legal-topic-card h3,
+.legal-support-copy h2 {
+  margin: 0;
+}
+
+.legal-summary-card h3,
+.legal-topic-card h3 {
+  font-size: 1.12rem;
+}
+
+.legal-summary-card p,
+.legal-topic-card p,
+.legal-topic-card li,
+.legal-support-copy p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.legal-summary-card p,
+.legal-topic-card p,
+.legal-support-copy p {
+  margin: 0.65rem 0 0;
+}
+
+.legal-topic-card ul {
+  margin: 0.7rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.legal-topic-card li + li {
+  margin-top: 0.5rem;
+}
+
+.legal-topic-card-list {
+  background:
+    linear-gradient(180deg, rgba(181, 81, 44, 0.08), rgba(255, 255, 255, 0.82)),
+    rgba(255, 255, 255, 0.74);
+}
+
+.legal-support-band {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.legal-support-copy {
+  max-width: 42rem;
+}
+
+.legal-support-copy h2 {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1;
+}

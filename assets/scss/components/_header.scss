@@ -1,0 +1,221 @@
+// Sticky header, navigation groups, dropdowns, and mobile menu behavior.
+
+.site-header {
+  position: sticky;
+  top: 1rem;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  background: rgba(255, 248, 240, 0.72);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-soft);
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-width: 0;
+}
+
+.brand img {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.8);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.brand-copy {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.brand-copy strong {
+  font-size: 1.02rem;
+  letter-spacing: 0.18em;
+}
+
+.brand-copy span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.header-panel {
+  display: contents;
+}
+
+.nav-toggle-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.mobile-nav-label {
+  font-weight: 700;
+}
+
+.mobile-nav-bars {
+  display: grid;
+  gap: 4px;
+}
+
+.mobile-nav-bars span {
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.nav-link,
+.nav-group summary,
+.install-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 48px;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.nav-link,
+.nav-group summary {
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.nav-link:hover,
+.nav-group summary:hover,
+.nav-group[open] summary {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(181, 81, 44, 0.18);
+  transform: translateY(-1px);
+}
+
+.nav-group {
+  position: relative;
+}
+
+.nav-group summary {
+  cursor: pointer;
+  list-style: none;
+  gap: 0.55rem;
+}
+
+.nav-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-group summary::after {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 180ms ease;
+}
+
+.nav-group[open] summary::after {
+  transform: rotate(-135deg) translateY(-1px);
+}
+
+/* Details panels keep the dropdowns lightweight while still feeling animated. */
+.nav-menu {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 50%;
+  display: grid;
+  gap: 0.35rem;
+  min-width: 220px;
+  padding: 0.7rem;
+  border: 1px solid rgba(181, 81, 44, 0.16);
+  border-radius: 22px;
+  background: rgba(255, 250, 243, 0.98);
+  box-shadow: var(--shadow-soft);
+  opacity: 0;
+  transform: translateX(-50%) translateY(10px) scale(0.97);
+  transform-origin: top center;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.nav-group[open] .nav-menu {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.nav-menu a {
+  padding: 0.8rem 0.95rem;
+  border-radius: 14px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus-visible {
+  color: var(--text);
+  background: rgba(181, 81, 44, 0.1);
+  outline: none;
+}
+
+.install-link {
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+  box-shadow: 0 14px 30px rgba(181, 81, 44, 0.22);
+}
+
+.install-link:hover,
+.install-link:focus-visible {
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.site-header:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 38px rgba(46, 28, 18, 0.12);
+}
+
+.brand:hover img,
+.brand:focus-visible img {
+  transform: rotate(-4deg) scale(1.04);
+  box-shadow: 0 12px 24px rgba(46, 28, 18, 0.16);
+}

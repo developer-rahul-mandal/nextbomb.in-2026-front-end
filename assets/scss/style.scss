@@ -1,0 +1,34 @@
+// Primary SCSS entrypoint. Compile this file into ../css/style.css to keep the current HTML links unchanged.
+
+// Base theme primitives
+@use "base/fonts";
+@use "base/tokens";
+@use "base/reset";
+@use "base/animations";
+@use "base/global";
+
+// Shared shell and site chrome
+@use "layout/shell";
+@use "components/header";
+@use "components/hero";
+@use "sections/experience";
+@use "sections/cta";
+@use "sections/content";
+@use "components/footer";
+
+// Route-specific styling
+@use "pages/legal-core";
+@use "pages/legal-home";
+@use "pages/tools";
+@use "pages/stats";
+@use "pages/donations";
+@use "pages/contact-about";
+@use "pages/protect";
+
+// Responsive layers
+@use "responsive/desktop";
+@use "responsive/tablet";
+@use "responsive/small-tablet";
+@use "responsive/phone";
+@use "responsive/narrow";
+@use "responsive/motion";
