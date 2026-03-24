@@ -9,13 +9,21 @@
       name="description"
       content="This page is forbidden. Return to the NEXTBOMB homepage, browse tools, or contact support if you believe this is an error."
     />
+    <script src="./assets/js/theme-init.js?v1"></script>
     <link rel="stylesheet" href="assets/css/style.css?v18" />
     <link rel="stylesheet" href="assets/css/error-pages.css?v1" />
+    <link rel="stylesheet" href="./assets/css/site-enhancements.css?v1" />
     <link
       rel="shortcut icon"
       href="https://nextbomb.in/includes/img/favicon.ico"
       type="image/x-icon"
     />
+    <meta name="theme-color" content="#fbf6ee" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./assets/img/pwa-icon-192.png" />
   </head>
   <body class="error-body status-403">
     <div class="page-shell">
@@ -70,13 +78,23 @@
             </details>
           </nav>
 
-          <a
-            class="install-link"
-            href="https://nextbomb.in/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Install</a
-          >
+          <div class="header-actions">
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle dark mode"
+              aria-pressed="false"
+            >
+              Theme
+            </button>
+            <button
+              class="install-link site-install-button"
+              type="button"
+              hidden
+            >
+              Install
+            </button>
+          </div>
         </div>
       </header>
 
@@ -448,6 +466,10 @@
         <p class="footer-meta">&copy; 2022-26 NEXTBOMB. All rights reserved.</p>
       </footer>
     </div>
+    <script src="./assets/js/theme-toggle.js?v1" defer></script>
+    <script src="./assets/js/site-pwa.js?v1" defer></script>
   </body>
 </html>
+
+
 

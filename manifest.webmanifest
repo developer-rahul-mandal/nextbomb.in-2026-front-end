@@ -1,0 +1,32 @@
+{
+  "id": "./index.html",
+  "name": "NEXTBOMB",
+  "short_name": "NEXTBOMB",
+  "description": "NEXTBOMB as an installable web app with offline support and a site-wide dark mode.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#09111b",
+  "theme_color": "#09111b",
+  "icons": [
+    {
+      "src": "./assets/img/pwa-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/img/pwa-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/img/pwa-icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
