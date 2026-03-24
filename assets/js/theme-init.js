@@ -1,6 +1,8 @@
 (function () {
   var storageKey = "nextbomb-theme";
   var root = document.documentElement;
+  root.dataset.pageLoading = "true";
+  window.__nextbombLoaderStart = Date.now();
   var media = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
   var prefersDark = Boolean(media && media.matches);
   var theme = prefersDark ? "dark" : "light";

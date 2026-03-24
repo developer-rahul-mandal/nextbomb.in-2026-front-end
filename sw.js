@@ -1,4 +1,4 @@
-const CACHE_NAME = "nextbomb-shell-v3";
+const CACHE_NAME = "nextbomb-shell-v6";
 const CORE_ASSETS = [
   "./offline.html",
   "./assets/css/style.css",
@@ -6,6 +6,7 @@ const CORE_ASSETS = [
   "./assets/css/site-enhancements.css",
   "./assets/js/theme-init.js",
   "./assets/js/theme-toggle.js",
+  "./assets/js/site-loader.js",
   "./assets/js/site-pwa.js",
   "./manifest.webmanifest",
   "./assets/img/pwa-icon-192.png",

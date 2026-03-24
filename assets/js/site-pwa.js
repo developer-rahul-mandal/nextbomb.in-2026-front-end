@@ -3,6 +3,8 @@
   var script = document.currentScript || document.querySelector('script[src*="site-pwa.js"]');
   var siteRoot = script ? new URL("../../", script.src) : new URL("./", window.location.href);
   var offlinePageUrl = new URL("offline.html", siteRoot);
+  var hostname = window.location.hostname;
+  var isLocalHost = hostname === "localhost" || hostname === "127.0.0.1" || hostname === "[::1]";
   var deferredPrompt = null;
 
   function isStandalone() {
@@ -90,6 +92,16 @@
   }
 
   if ("serviceWorker" in navigator && window.location.protocol !== "file:") {
+    if (isLocalHost) {
+      navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        registrations.forEach(function (registration) {
+          registration.unregister();
+        });
+      });
+
+      return;
+    }
+
     navigator.serviceWorker.register(new URL("sw.js", siteRoot), {
       scope: siteRoot.pathname
     }).catch(function (error) {
