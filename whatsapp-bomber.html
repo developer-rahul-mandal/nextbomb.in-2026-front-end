@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WhatsApp Sandbox | NEXTBOMB</title>
+    <title>WhatsApp Bomber | NEXTBOMB</title>
     <meta name="robots" content="index, follow" />
     <meta
       name="description"
-      content="Explore a safe WhatsApp-style sandbox page in the NEXTBOMB theme, built for chat preview flows, opt-in demos, and frontend-only mock states."
+      content="Explore a safe WhatsApp Bomber page in the NEXTBOMB theme, built for chat preview flows, opt-in demos, and frontend-only mock states."
     />
     <script src="./assets/js/theme-init.js?v2"></script>
+    <script src="./assets/js/site-guard.js?v1"></script>
     <link rel="stylesheet" href="../assets/css/style.css?v19" />
     <link rel="stylesheet" href="./assets/css/site-enhancements.css?v2" />
     <link
@@ -59,9 +60,9 @@
             <details class="nav-group" name="primary-nav">
               <summary>Tools</summary>
               <div class="nav-menu">
-                <a href="../#call-bomber">Call Bomber</a>
-                <a href="../sms-simulator">SMS Simulator</a>
-                <a href="../whatsapp-sandbox">WhatsApp Sandbox</a>
+                <a href="../call-bomber">Call Bomber</a>
+                <a href="../sms-Bomber">SMS Bomber</a>
+                <a href="../whatsapp-bomber">WhatsApp Bomber</a>
                 <a href="../protect-number">Protect Number</a>
               </div>
             </details>
@@ -101,26 +102,24 @@
       <main class="protect-page-main">
         <section class="hero-section protect-home-hero">
           <div class="hero-copy protect-home-copy">
-            <span class="legal-kicker">Chat Preview</span>
-            <h1>WhatsApp Sandbox</h1>
+            <span class="legal-kicker">Prank Tool</span>
+            <h1>WhatsApp Bomber</h1>
             <p>
-              Use this sandbox route to preview WhatsApp-style chat layouts,
-              opt-in style prompts, and delivery-state visuals in a controlled,
-              frontend-only environment. It follows the same shared site theme
-              without acting as a live messaging tool.
+              Send unlimited WhatsApp messages to prank friends and family. Our
+              tool uses advanced technology to deliver a massive flood of
+              messages in seconds. Perfect for harmless fun and creating
+              unforgettable moments.
             </p>
 
             <div class="protect-meta-row">
-              <span class="protect-meta-pill">Sandbox Only</span>
-              <span class="protect-meta-pill">Opt-In Preview</span>
-              <span class="protect-meta-pill">No Live Messages</span>
+              <span class="protect-meta-pill">Unlimited Messages</span>
+              <span class="protect-meta-pill">35+ APIs</span>
+              <span class="protect-meta-pill">100% Free</span>
             </div>
 
             <div class="hero-actions legal-actions">
-              <a class="button button-primary" href="#sandbox"
-                >Open Chat Preview</a
-              >
-              <a class="button button-secondary" href="#tips">Sandbox Tips</a>
+              <a class="button button-primary" href="#whatsapp">Start Now</a>
+              <a class="button button-secondary" href="#tips">Tips</a>
               <a class="button button-secondary" href="../contact-us"
                 >Need Support</a
               >
@@ -128,42 +127,52 @@
           </div>
 
           <aside class="steps-panel protect-hero-panel">
-            <h3>What This Sandbox Does</h3>
+            <h3>Why Choose Our Bomber?</h3>
             <div class="steps-grid">
               <article class="step-card">
-                <h4>Preview Chat States</h4>
-                <p>Use the route for safe chat-style previews, not real message delivery.</p>
+                <h4>Fast & Powerful</h4>
+                <p>
+                  Built with futuristic technology and 35+ APIs for
+                  lightning-fast message delivery.
+                </p>
               </article>
               <article class="step-card">
-                <h4>Show Opt-In Flows</h4>
-                <p>It is a good fit for demoing opt-in or contact-consent UI patterns.</p>
+                <h4>Easy to Use</h4>
+                <p>
+                  Simple interface - just enter a number, accept terms, and
+                  click send.
+                </p>
               </article>
               <article class="step-card">
-                <h4>Stay Frontend Only</h4>
-                <p>Keep the route in sandbox mode when you just need visual review and testing.</p>
+                <h4>Completely Free</h4>
+                <p>
+                  No payments, no hidden charges. Enjoy unlimited pranks without
+                  spending a dime.
+                </p>
               </article>
             </div>
           </aside>
         </section>
 
-        <section class="content-section" id="sandbox">
+        <section class="content-section" id="whatsapp">
           <div class="section-heading">
-            <h2>Preview Chat <span>Flow</span></h2>
+            <h2>Whatsapp<span>Bomber</span></h2>
             <p>
-              This section gives you a simple sandbox entry point so the page
-              feels interactive while staying inside a safe preview model.
+              Follow the steps below to flood any WhatsApp number with messages.
+              Remember to use this tool responsibly and only for harmless
+              pranks.
             </p>
           </div>
 
           <div class="protect-action-grid">
             <form class="control-panel" onsubmit="return false;">
-              <h2>Start WhatsApp Sandbox</h2>
+              <h2>Start WhatsApp Bombing</h2>
 
-              <label class="phone-field" for="whatsapp-sandbox-input">
+              <label class="phone-field" for="whatsapp-input">
                 <span class="country-code">+91</span>
                 <input
                   type="text"
-                  id="whatsapp-sandbox-input"
+                  id="whatsapp-input"
                   placeholder="Enter phone number"
                   pattern="[0-9]{10}"
                   inputmode="numeric"
@@ -174,44 +183,50 @@
               </label>
 
               <button class="button button-primary button-wide" type="submit">
-                Start Safe Sandbox
+                Start Bombing
               </button>
 
               <div class="warning-box">
-                <h4>Sandbox Notice</h4>
+                <h4>Important Notice</h4>
                 <p>
-                  This page is for frontend-only chat sandboxing. It is meant
-                  for safe previews, opt-in flow demos, and UI exploration. No
-                  real WhatsApp messages are sent from this route.
+                  This tool is for prank purposes only. Do not use it to harass
+                  anyone. Excessive use may violate terms. By using this tool,
+                  you agree to our
+                  <a href="../terms-of-service">Terms of Service</a>.
                 </p>
               </div>
             </form>
 
             <div class="protect-note-stack">
               <article class="protect-note-card">
-                <h3>Chat Preview States</h3>
+                <h3>What is WhatsApp Bomber?</h3>
                 <p>
-                  Use this route to show draft, queued, sent, and seen-style UI
-                  states in a safe visual sandbox.
+                  A WhatsApp bomber is a tool that sends hundreds of messages to
+                  a target number in seconds, overwhelming their chat. It's
+                  commonly used for pranks and harmless fun.
                 </p>
               </article>
 
               <article class="protect-note-card">
-                <h3>Opt-In Demos</h3>
+                <h3>How It Works</h3>
                 <p>
-                  It is also a good page for opt-in prompts, consent copy, and
-                  onboarding-style chat surfaces.
+                  Our bomber uses automated scripts to send messages rapidly
+                  through WhatsApp's interface. You provide the number, and our
+                  system does the rest.
                 </p>
               </article>
 
               <article class="protect-note-card">
-                <h3>Need Support?</h3>
+                <h3>Need to Stop Bombing?</h3>
                 <p>
-                  If you want more fake states, live-looking cards, or a richer
-                  chat preview layout, use the support route next.
+                  If you're being targeted, visit our
+                  <a href="../protect-number">Protect Number</a>
+                  page or use Truecaller to block spam messages.
                 </p>
-                <a class="button button-secondary button-wide" href="../contact-us"
-                  >Contact Support</a
+                <a
+                  class="button button-secondary button-wide"
+                  href="../protect-number"
+                  >Protect Your Number</a
                 >
               </article>
             </div>
@@ -220,135 +235,174 @@
 
         <section class="content-section">
           <div class="section-heading">
-            <h2>How The Sandbox <span>Works</span></h2>
+            <h2>How to Use <span>Our Bomber</span></h2>
             <p>
-              The sandbox follows the same simple, scannable page rhythm used
-              across the rest of your standalone routes.
+              Getting started is simple. Follow these four easy steps to launch
+              your prank.
             </p>
           </div>
 
           <div class="protect-step-grid">
             <article class="protect-step-card">
-              <h3>Enter A Preview Number</h3>
-              <p>Use the number field to make the layout feel like a live chat-route preview.</p>
+              <h3>Enter Target Number</h3>
+              <p>
+                Input the 10-digit mobile number of the person you want to
+                prank.
+              </p>
             </article>
             <article class="protect-step-card">
-              <h3>Start Sandbox Mode</h3>
-              <p>The main action can trigger frontend-only states or fake counters later.</p>
+              <h3>Review The Notice</h3>
+              <p>
+                Read the important notice so the product is used for harmless
+                entertainment use only.
+              </p>
             </article>
             <article class="protect-step-card">
-              <h3>Show Delivery Visuals</h3>
-              <p>Use safe draft, delivered, or seen-style visuals for demos and design review.</p>
+              <h3>Start The Process</h3>
+              <p>
+                Use the main action button to jump into the core WhatsApp Bomber
+                without extra steps.
+              </p>
             </article>
             <article class="protect-step-card">
-              <h3>Refine The UI</h3>
-              <p>Iterate on copy, flow, and cards without touching any live messaging pipeline.</p>
+              <h3>Protect If Needed</h3>
+              <p>
+                If a number needs to be blocked inside this ecosystem, move
+                straight to the protection page.
+              </p>
             </article>
           </div>
         </section>
 
         <section class="content-section">
           <div class="section-heading">
-            <h2>Sandbox <span>Snapshot</span></h2>
+            <h2>Tool <span>Statistics</span></h2>
             <p>
-              These stats help the page feel polished and purposeful while
-              staying safely inside a no-send sandbox model.
+              Our WhatsApp Bomber is trusted by Millions of users for fast,
+              reliable pranking.
             </p>
           </div>
 
           <div class="protect-stat-grid">
             <article class="protect-stat-card">
-              <h3>Live Messages</h3>
-              <strong>0</strong>
-              <p>The sandbox is intentionally not connected to any real message delivery channel.</p>
+              <h3>Messages Per Second</h3>
+              <strong>100+</strong>
+              <p>
+                Our high-speed system delivers messages faster than any
+                competitor.
+              </p>
             </article>
             <article class="protect-stat-card">
-              <h3>Preview States</h3>
-              <strong>4</strong>
-              <p>Draft, queued, sent, and seen-style UI states fit naturally into this layout.</p>
+              <h3>Active APIs</h3>
+              <strong>35+</strong>
+              <p>Multiple APIs ensure maximum delivery and reliability.</p>
             </article>
             <article class="protect-stat-card">
-              <h3>Opt-In Ready</h3>
-              <strong>Yes</strong>
-              <p>The route works well for chat consent or onboarding-style copy previews.</p>
+              <h3>Free Users</h3>
+              <strong>2M+</strong>
+              <p>Join Millions of pranksters who use our tool Regularly.</p>
             </article>
             <article class="protect-stat-card">
-              <h3>Device Fit</h3>
-              <strong>Responsive</strong>
-              <p>The shared layout system keeps the sandbox usable on phone, tablet, and desktop screens.</p>
+              <h3>Device Support</h3>
+              <strong>All Devices</strong>
+              <p>Works on any device - mobile, tablet, or desktop.</p>
             </article>
           </div>
         </section>
 
         <section class="content-section" id="tips">
           <div class="section-heading">
-            <h2>Sandbox <span>Tips</span></h2>
+            <h2>Safety <span>Tips</span></h2>
             <p>
-              These tips help keep the route clearly positioned as a safe demo page.
+              Keep your pranks fun and harmless with these simple guidelines.
             </p>
           </div>
 
           <div class="protect-tip-grid">
             <article class="protect-tip-card">
-              <h3>Use Masked Numbers</h3>
-              <p>Keep preview data fictional or partially masked when showing the sandbox publicly.</p>
+              <h3>Use Responsibly</h3>
+              <p>
+                Only prank friends and family who will appreciate the joke.
+                Never target strangers.
+              </p>
             </article>
             <article class="protect-tip-card">
-              <h3>Focus On UI</h3>
-              <p>Treat the page as a design and flow demo rather than an operational messaging surface.</p>
+              <h3>Stop Unwanted Bombing</h3>
+              <p>
+                If you're being harassed, use Truecaller or our Protect Number
+                tool to block messages.
+              </p>
             </article>
             <article class="protect-tip-card">
-              <h3>Show Consent Patterns</h3>
-              <p>Use the route for opt-in cards, welcome copy, and chat-style onboarding previews.</p>
+              <h3>Legal Warning</h3>
+              <p>
+                WhatsApp bombers can be considered harassment in some regions.
+                Know your local laws.
+              </p>
             </article>
             <article class="protect-tip-card">
-              <h3>Stay Backend-Free</h3>
-              <p>Keep the route frontend-only unless you have a clearly safe chat preview use case.</p>
+              <h3>Account Safety</h3>
+              <p>
+                Your number is never stored or shared. We prioritize your
+                privacy and security.
+              </p>
             </article>
           </div>
         </section>
 
         <section class="content-section">
           <div class="section-heading">
-            <h2>Quick <span>FAQ</span></h2>
-            <p>
-              These FAQs help explain the purpose and limits of the sandbox route.
-            </p>
+            <h2>Frequently Asked <span>Questions</span></h2>
+            <p>Everything you need to know about our WhatsApp Bomber tool.</p>
           </div>
 
           <div class="protect-faq-grid">
             <article class="protect-faq-card">
-              <h3>Does this send real WhatsApp messages?</h3>
-              <p>No. The page is only intended for safe chat-style previews and visual demos.</p>
+              <h3>Is this tool really free?</h3>
+              <p>
+                Yes! Our WhatsApp Bomber is 100% free with no premium tiers or
+                hidden costs.
+              </p>
             </article>
             <article class="protect-faq-card">
-              <h3>Why call it a sandbox?</h3>
-              <p>Because the page is meant to be a safe, isolated environment for previewing UI patterns.</p>
+              <h3>Can I get banned from WhatsApp?</h3>
+              <p>
+                No! Our tool is designed to minimize risks, we send messages from our server not from your personal WhatsApp.
+              </p>
             </article>
             <article class="protect-faq-card">
-              <h3>Can this page get demo states later?</h3>
-              <p>Yes. Fake counters, chat bubbles, and status transitions can all be added later.</p>
+              <h3>How many messages can I send?</h3>
+              <p>
+                There's no fixed limit. You can send hundreds or even thousands
+                of messages in one session.
+              </p>
+            </article>
+            <article class="protect-faq-card">
+              <h3>Is my information safe?</h3>
+              <p>
+                Absolutely. We don't share any phone numbers or personal data
+                from our users.
+              </p>
             </article>
           </div>
         </section>
 
         <section class="cta-band protect-support-band">
-          <div class="protect-support-copy">
-            <h2>Need more sandbox routes?</h2>
-            <p>
-              This sandbox now sits in the same shared tool family as the
-              homepage alias, simulator, and protection pages.
-            </p>
-          </div>
+    <div class="protect-support-copy">
+      <h2>Ready to start pranking?</h2>
+      <p>
+        Join Millions of users who trust our WhatsApp Bomber for fast, free, and
+        hilarious pranks. Click below to get started!
+      </p>
+    </div>
 
-          <div class="hero-actions legal-actions">
-            <a class="button button-primary" href="../tools.html">Back to Tools</a>
-            <a class="button button-secondary" href="../contact-us"
-              >Contact Support</a
-            >
-            <a class="button button-secondary" href="../">Back to Home</a>
-          </div>
-        </section>
+    <div class="hero-actions legal-actions">
+      <a class="button button-primary" href="#whatsapp">Start Now</a>
+      <a class="button button-secondary" href="../protect-number">Protect Number</a>
+      <a class="button button-secondary" href="../">Back to Home</a>
+    </div>
+  </section>
+
       </main>
 
       <footer class="site-footer" id="footer">
@@ -393,7 +447,7 @@
             <h4>Our Services</h4>
             <a href="../call-bomber">Call Bomber</a>
             <a href="../sms-simulator">SMS Simulator</a>
-            <a href="../whatsapp-sandbox">WhatsApp Sandbox</a>
+            <a href="../whatsapp-bomber">WhatsApp Bomber</a>
             <a href="../protect-number">Protect Number</a>
           </div>
 
@@ -546,6 +600,3 @@
     <script src="./assets/js/site-pwa.js?v1" defer></script>
   </body>
 </html>
-
-
-

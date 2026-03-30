@@ -1,10 +1,11 @@
-const CACHE_NAME = "nextbomb-shell-v6";
+const CACHE_NAME = "nextbomb-shell-v9";
 const CORE_ASSETS = [
   "./offline.html",
   "./assets/css/style.css",
   "./assets/css/error-pages.css",
   "./assets/css/site-enhancements.css",
   "./assets/js/theme-init.js",
+  "./assets/js/site-guard.js",
   "./assets/js/theme-toggle.js",
   "./assets/js/site-loader.js",
   "./assets/js/site-pwa.js",

@@ -249,6 +249,7 @@ html[data-theme="dark"] :is(
     .about-pill,
     .protect-meta-pill,
     .donation-meta-pill,
+    .tool-stat-card,
     .stats-tag,
     .button-secondary
   ) {

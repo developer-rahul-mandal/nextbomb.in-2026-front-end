@@ -10,6 +10,7 @@
       content="Preview SMS-style flows safely with the NEXTBOMB SMS Simulator page, including a demo form, process steps, preview tips, and FAQs."
     />
     <script src="../assets/js/theme-init.js?v2"></script>
+    <script src="../assets/js/site-guard.js?v1"></script>
     <link rel="stylesheet" href="../assets/css/style.css?v19" />
     <link rel="stylesheet" href="../assets/css/site-enhancements.css?v2" />
     <link
@@ -63,7 +64,7 @@
                 <a href="../sms-bomber">SMS Bomber</a>
                 <a href="../whatsapp-bomber">WhatsApp Bomber</a>
                 <a href="../protect-number">Protect Number</a>
-              </div>  
+              </div>
             </details>
 
             <details class="nav-group" name="primary-nav">
@@ -101,26 +102,23 @@
       <main class="protect-page-main">
         <section class="hero-section protect-home-hero">
           <div class="hero-copy protect-home-copy">
-            <span class="legal-kicker">Safe Tool Preview</span>
-            <h1>SMS Simulator</h1>
+            <span class="legal-kicker">Prank Tool</span>
+            <h1>SMS Bomber</h1>
             <p>
-              Use this frontend-only simulator to preview SMS-style flows,
-              layouts, and message states without sending any real messages.
-              It follows the same homepage-inspired structure as the rest of
-              the site while staying clearly inside a safe demo boundary.
+              Send unlimited SMS to any Indian number for fun and pranks. Fast,
+              free, and easy to use. Our online tool sends 1000+ messages per
+              hour with complete anonymity.
             </p>
 
             <div class="protect-meta-row">
-              <span class="protect-meta-pill">Frontend Only</span>
-              <span class="protect-meta-pill">Safe Preview</span>
-              <span class="protect-meta-pill">No Live Sending</span>
+              <span class="protect-meta-pill">100% free</span>
+              <span class="protect-meta-pill">1000+ SMS/hour</span>
+              <span class="protect-meta-pill">No Signup</span>
             </div>
 
             <div class="hero-actions legal-actions">
-              <a class="button button-primary" href="#simulator"
-                >Open SMS Preview</a
-              >
-              <a class="button button-secondary" href="#tips">Preview Tips</a>
+              <a class="button button-primary" href="#sms">Start Now</a>
+              <a class="button button-secondary" href="#tips">Tips</a>
               <a class="button button-secondary" href="../contact-us"
                 >Need Support</a
               >
@@ -128,36 +126,45 @@
           </div>
 
           <aside class="steps-panel protect-hero-panel">
-            <h3>What This Page Does</h3>
+            <h3>Why Choose Us?</h3>
             <div class="steps-grid">
               <article class="step-card">
-                <h4>Preview Only</h4>
-                <p>This route is for simulated SMS flows and does not send anything live.</p>
+                <h4>Fast & Reliable</h4>
+                <p>
+                  125+ APIs integrated for superfast message delivery to any
+                  Indian number.
+                </p>
               </article>
               <article class="step-card">
-                <h4>Message States</h4>
-                <p>Use it to showcase input, queue, sent, and completed-style UI states safely.</p>
+                <h4>100% Free</h4>
+                <p>
+                  No hidden charges. Use unlimited SMS bombing without paying
+                  anything.
+                </p>
               </article>
               <article class="step-card">
-                <h4>Demo Friendly</h4>
-                <p>It works well for design reviews, presentations, and frontend prototypes.</p>
+                <h4>Safe & Anonymous</h4>
+                <p>
+                  Your identity stays private. We don't share your information
+                  with anyone.
+                </p>
               </article>
             </div>
           </aside>
         </section>
 
-        <section class="content-section" id="simulator">
+        <section class="content-section" id="sms">
           <div class="section-heading">
-            <h2>Preview SMS <span>Flow</span></h2>
+            <h2>Launch SMS <span>Bomber</span></h2>
             <p>
-              This route uses a safe preview form so you can show how an SMS
-              tool page could feel without triggering real delivery.
+              Enter the target number and start bombing instantly. Works with
+              all Indian mobile numbers.
             </p>
           </div>
 
           <div class="protect-action-grid">
             <form class="control-panel" onsubmit="return false;">
-              <h2>Start Safe SMS Preview</h2>
+              <h2>Start SMS Bombing</h2>
 
               <label class="phone-field" for="sms-preview-input">
                 <span class="country-code">+91</span>
@@ -174,44 +181,46 @@
               </label>
 
               <button class="button button-primary button-wide" type="submit">
-                Start Safe Preview
+                Start Now
               </button>
 
               <div class="warning-box">
-                <h4>Simulation Notice</h4>
+                <h4>Important Notice</h4>
                 <p>
-                  This page is a simulator only. It is meant for UI demos,
-                  layout previews, and frontend presentations. No real SMS is
-                  sent from this route.
+                  This tool is for educational and prank purposes only. Please
+                  use responsibly on friends and family who would appreciate the
+                  joke. Misuse or harassment is strictly prohibited.
                 </p>
               </div>
             </form>
 
             <div class="protect-note-stack">
               <article class="protect-note-card">
-                <h3>Template States</h3>
+                <h3>125+ APIs</h3>
                 <p>
-                  Use this page to show loading, preview, delivered, and
-                  completed UI patterns in one safe route.
+                  Our advanced system uses multiple APIs to ensure maximum
+                  message delivery speed.
                 </p>
               </article>
 
               <article class="protect-note-card">
-                <h3>Frontend Prototype</h3>
+                <h3>Unlimited Messages</h3>
                 <p>
-                  Connect this layout to mock data, demo counters, or a design
-                  walkthrough without touching any real messaging flow.
+                  Send 1000+ SMS per hour to any single target number without
+                  any limits.
                 </p>
               </article>
 
               <article class="protect-note-card">
-                <h3>Need Support?</h3>
+                <h3>Getting Spammed?</h3>
                 <p>
-                  If you want extra preview states or a backend-free demo data
-                  layer, the support page is the next step.
+                  Visit our Number Protection page to instantly stop all bombing
+                  attacks on your number.
                 </p>
-                <a class="button button-secondary button-wide" href="../contact-us"
-                  >Contact Support</a
+                <a
+                  class="button button-secondary button-wide"
+                  href="../protect-number"
+                  >Protect Number</a
                 >
               </article>
             </div>
@@ -220,115 +229,151 @@
 
         <section class="content-section">
           <div class="section-heading">
-            <h2>How The Simulator <span>Works</span></h2>
+            <h2>How To Use SMS <span>Bomber</span></h2>
             <p>
-              The simulator is arranged in the same simple four-step logic used
-              across the rest of the tool pages.
+              Follow these simple steps to start pranking your friends in
+              seconds.
             </p>
           </div>
 
           <div class="protect-step-grid">
             <article class="protect-step-card">
-              <h3>Enter A Preview Number</h3>
-              <p>Use the number field to make the page feel like a live message-flow demo.</p>
+              <h3>Enter A 10-Digit Number</h3>
+              <p>
+                Enter a valid mobile number in the field provided and keep the
+                format clean before starting.
+              </p>
             </article>
             <article class="protect-step-card">
-              <h3>Start The Simulation</h3>
-              <p>The primary action can trigger fake loading, queue, and delivery states later.</p>
+              <h3>Review The Notice</h3>
+              <p>
+                Read the important notice so the product is used for harmless
+                entertainment or educational use only.
+              </p>
             </article>
             <article class="protect-step-card">
-              <h3>Show Safe Statuses</h3>
-              <p>Present queued, sent, failed, or completed visuals without sending anything live.</p>
+              <h3>Start The Process</h3>
+              <p>
+                Use the main action button to jump into the core Call Bomber
+                flow without extra steps.
+              </p>
             </article>
             <article class="protect-step-card">
-              <h3>Review And Iterate</h3>
-              <p>Use the route for demos, content review, or future frontend iteration.</p>
+              <h3>Protect If Needed</h3>
+              <p>
+                If a number needs to be blocked inside this ecosystem, move
+                straight to the protection page.
+              </p>
             </article>
           </div>
         </section>
 
         <section class="content-section">
           <div class="section-heading">
-            <h2>Simulator <span>Snapshot</span></h2>
+            <h2>Tool <span>Statistics</span></h2>
             <p>
-              These cards make the simulator feel active while staying fully
-              inside a safe frontend-only boundary.
+              Our SMS Bomber is trusted by Millions of users for fast, reliable
+              pranking.
             </p>
           </div>
 
           <div class="protect-stat-grid">
             <article class="protect-stat-card">
-              <h3>Live Sends</h3>
-              <strong>0</strong>
-              <p>The route is intentionally preview-only and does not trigger real message delivery.</p>
+              <h3>Messages Per Second</h3>
+              <strong>100+</strong>
+              <p>
+                Our high-speed system delivers messages faster than any
+                competitor.
+              </p>
             </article>
             <article class="protect-stat-card">
-              <h3>Preview Modes</h3>
-              <strong>4</strong>
-              <p>Use loading, queued, sent, and completed states to make demos feel complete.</p>
+              <h3>Active APIs</h3>
+              <strong>125+</strong>
+              <p>Multiple APIs ensure maximum delivery and reliability.</p>
             </article>
             <article class="protect-stat-card">
-              <h3>Frontend Ready</h3>
-              <strong>100%</strong>
-              <p>The page is ready to pair with fake data or a visual presentation walkthrough.</p>
+              <h3>Free Users</h3>
+              <strong>2M+</strong>
+              <p>Join Millions of pranksters who use our tool Regularly.</p>
             </article>
             <article class="protect-stat-card">
-              <h3>Mobile Fit</h3>
-              <strong>Responsive</strong>
-              <p>The same shared responsive system keeps the simulator usable across device sizes.</p>
+              <h3>Device Support</h3>
+              <strong>All Devices</strong>
+              <p>Works on any device - mobile, tablet, or desktop.</p>
             </article>
           </div>
         </section>
 
         <section class="content-section" id="tips">
           <div class="section-heading">
-            <h2>Preview <span>Tips</span></h2>
+            <h2>Safety <span>Tips</span></h2>
             <p>
-              These notes help keep the page positioned as a safe simulator
-              rather than a live messaging tool.
+              Keep your pranks fun and harmless with these simple guidelines.
             </p>
           </div>
 
           <div class="protect-tip-grid">
             <article class="protect-tip-card">
-              <h3>Use Demo Numbers</h3>
-              <p>Keep sample data masked or obviously fictional when presenting the simulator.</p>
+              <h3>Use Responsibly</h3>
+              <p>
+                Only prank friends and family who will appreciate the joke.
+                Never target strangers.
+              </p>
             </article>
             <article class="protect-tip-card">
-              <h3>Show Status Progress</h3>
-              <p>Fake status transitions make the page feel alive without needing a backend.</p>
+              <h3>Stop Unwanted Bombing</h3>
+              <p>
+                If you're being harassed, use Truecaller or our Protect Number
+                tool to block messages.
+              </p>
             </article>
             <article class="protect-tip-card">
-              <h3>Use It For Reviews</h3>
-              <p>It works well for design QA, content approval, and stakeholder walkthroughs.</p>
+              <h3>Legal Warning</h3>
+              <p>
+                SMS bombers can be considered harassment in some regions. Know
+                your local laws.
+              </p>
             </article>
             <article class="protect-tip-card">
-              <h3>Stay In Sandbox Mode</h3>
-              <p>Keep the route frontend-only unless you have a clearly safe use case for deeper wiring.</p>
+              <h3>Account Safety</h3>
+              <p>
+                Your number is never stored or shared. We prioritize your
+                privacy and security.
+              </p>
             </article>
           </div>
         </section>
 
         <section class="content-section">
           <div class="section-heading">
-            <h2>Quick <span>FAQ</span></h2>
+            <h2>Frequently Asked <span>Questions</span></h2>
             <p>
-              These FAQs help explain what the simulator is for and what it is not for.
+              These FAQs help explain what the simulator is for and what it is
+              not for.
             </p>
           </div>
 
           <div class="protect-faq-grid">
             <article class="protect-faq-card">
-              <h3>Does this send real SMS?</h3>
-              <p>No. This route is intended only for frontend simulation and safe preview use.</p>
+              <h3>Is this SMS bomber really free?</h3>
+              <p>
+                Yes! Our SMS bomber is completely free with no premium plans or
+                hidden charges.
+              </p>
             </article>
             <article class="protect-faq-card">
-              <h3>Why keep a separate simulator page?</h3>
-              <p>It gives you a safe route for previews, demos, and future UI experiments.</p>
+              <h3>Can I stop bombing after it starts?</h3>
+              <p>
+                Yes, simply close the browser tab or visit our Protection page
+                with the target number.
+              </p>
             </article>
             <article class="protect-faq-card">
-              <h3>Can I add fake counters later?</h3>
-              <p>Yes. This layout is a good fit for fake dashboards, loading states, and demo metrics.</p>
+              <h3>Is this safe to use?</h3>
+              <p>
+                Our service is safe when used responsibly for pranks on friends.
+                We don't share your identity or information.
+              </p>
             </article>
           </div>
         </section>
@@ -337,13 +382,15 @@
           <div class="protect-support-copy">
             <h2>Need more safe simulator routes?</h2>
             <p>
-              This simulator now matches the same route family as the other
-              tool pages and is ready for more fake-state polish if you want it.
+              This simulator now matches the same route family as the other tool
+              pages and is ready for more fake-state polish if you want it.
             </p>
           </div>
 
           <div class="hero-actions legal-actions">
-            <a class="button button-primary" href="../tools.html">Back to Tools</a>
+            <a class="button button-primary" href="../tools.html"
+              >Back to Tools</a
+            >
             <a class="button button-secondary" href="../contact-us"
               >Contact Support</a
             >
@@ -547,6 +594,3 @@
     <script src="../assets/js/site-pwa.js?v1" defer></script>
   </body>
 </html>
-
-
-
