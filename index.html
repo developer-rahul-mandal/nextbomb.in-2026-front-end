@@ -263,7 +263,7 @@
               href="http://telegram.dog/nextbomb"
               target="_blank"
               rel="noopener noreferrer"
-              >Join our Telegram Chsannel</a
+              >Join our Telegram Channel</a
             >
             <small>Get updates, tips, and exclusive offers!</small>
           </div>
@@ -603,9 +603,56 @@
         <p class="footer-meta">&copy; 2022-26 NEXTBOMB. All rights reserved.</p>
       </footer>
     </div>
+
+    <div class="call-progress-modal" id="call-progress-modal" hidden>
+      <div class="call-progress-modal__backdrop" data-call-modal-close></div>
+      <section
+        class="call-progress-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="call-progress-title"
+      >
+        <div class="call-progress-modal__media">
+          <img
+            src="../assets/img/static/output-onlinegiftools.gif"
+            alt="Call process animation"
+          />
+        </div>
+
+        <h2 class="visually-hidden" id="call-progress-title">
+          Call process status
+        </h2>
+
+        <div class="call-progress-modal__stats">
+          <div class="call-progress-modal__stat">
+            <span class="call-progress-modal__label">Timer</span>
+            <strong class="call-progress-modal__value" id="call-timer"
+              >00:00</strong
+            >
+          </div>
+
+          <div class="call-progress-modal__stat">
+            <span class="call-progress-modal__label">Counter</span>
+            <strong class="call-progress-modal__value" id="call-counter"
+              >0</strong
+            >
+          </div>
+        </div>
+
+        <button
+          class="button button-primary call-progress-modal__close"
+          type="button"
+          data-call-modal-close
+        >
+          Close
+        </button>
+      </section>
+    </div>
+
     <script src="./assets/js/theme-toggle.js?v1" defer></script>
     <script src="./assets/js/site-loader.js?v1" defer></script>
     <script src="./assets/js/site-pwa.js?v1" defer></script>
+    
   </body>
 </html>
 

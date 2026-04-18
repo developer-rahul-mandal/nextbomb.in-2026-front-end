@@ -1,0 +1,170 @@
+body.call-bomber-modal-open {
+  overflow: hidden;
+}
+
+.call-progress-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.call-progress-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.call-progress-modal[hidden] {
+  display: none;
+}
+
+.call-progress-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 24, 33, 0.68);
+  backdrop-filter: blur(12px);
+}
+
+.call-progress-modal__dialog {
+  position: relative;
+  display: grid;
+  gap: 1.15rem;
+  width: min(100%, 34rem);
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  padding: clamp(1.15rem, 4vw, 1.8rem);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-xl);
+  color: #fef8f1;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.09), transparent 12rem),
+    linear-gradient(180deg, var(--surface-dark) 0%, var(--surface-dark-soft) 100%);
+  box-shadow: var(--shadow);
+}
+
+.call-progress-modal__media {
+  display: grid;
+  place-items: center;
+  min-height: 12rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.call-progress-modal__media img {
+  width: min(100%, 18rem);
+  max-height: 14rem;
+  object-fit: contain;
+}
+
+.call-progress-modal__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.call-progress-modal__stat {
+  display: grid;
+  gap: 0.45rem;
+  min-height: 7rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.call-progress-modal__label {
+  color: rgba(254, 248, 241, 0.72);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.call-progress-modal__value {
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.call-progress-modal__close {
+  width: 100%;
+}
+
+.call-progress-modal__premium {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, rgba(245, 217, 150, 0.18), rgba(197, 103, 52, 0.08)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.call-progress-modal__premium h3 {
+  margin: 0;
+  font-size: 1.08rem;
+}
+
+.call-progress-modal__premium p {
+  margin: 0.35rem 0 0;
+  color: rgba(254, 248, 241, 0.74);
+  line-height: 1.55;
+}
+
+.call-progress-modal__premium-button {
+  min-height: 46px;
+  padding-inline: 1.1rem;
+}
+
+.call-progress-modal .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+html[data-theme="dark"] .call-progress-modal__backdrop {
+  background: rgba(3, 8, 14, 0.78);
+}
+
+@media (max-width: 520px) {
+  .call-progress-modal {
+    align-items: end;
+    padding: 0.75rem;
+  }
+
+  .call-progress-modal__dialog {
+    width: 100%;
+    border-radius: var(--radius-lg);
+  }
+
+  .call-progress-modal__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .call-progress-modal__premium {
+    grid-template-columns: 1fr;
+  }
+
+  .call-progress-modal__premium-button {
+    width: 100%;
+  }
+
+  .call-progress-modal__media {
+    min-height: 10rem;
+  }
+}
