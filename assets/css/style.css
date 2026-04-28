@@ -73,8 +73,7 @@ body::before {
   pointer-events: none;
   background-image: linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
   background-size: 48px 48px;
-  -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 82%);
-          mask-image: radial-gradient(circle at center, black 30%, transparent 82%);
+  mask-image: radial-gradient(circle at center, black 30%, transparent 82%);
   opacity: 0.35;
 }
 
@@ -139,8 +138,7 @@ summary {
   width: 58px;
   height: 58px;
   border-radius: 18px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   background: rgba(255, 255, 255, 0.8);
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
@@ -157,7 +155,8 @@ summary {
 
 .brand-copy span {
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.68rem;
+  white-space: nowrap;
 }
 
 .header-panel {
@@ -452,7 +451,6 @@ main {
 .button-compact {
   min-height: 48px;
   flex-shrink: 0;
-  min-width: -moz-fit-content;
   min-width: fit-content;
   padding-inline: 1.15rem;
 }
@@ -491,8 +489,7 @@ main {
 .hero-card img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .hero-card-main {
@@ -611,10 +608,6 @@ main {
   border-radius: 999px;
   color: #fff;
   background: rgba(255, 255, 255, 0.1);
-}
-
-.phone-field input::-moz-placeholder {
-  color: rgba(254, 248, 241, 0.52);
 }
 
 .phone-field input::placeholder {
@@ -1025,11 +1018,11 @@ main {
   font-size: 0.95rem;
 }
 
-body.call-bomber-modal-open {
+body.bomber-modal-open {
   overflow: hidden;
 }
 
-.call-progress-modal {
+.progress-modal {
   position: fixed;
   inset: 0;
   z-index: 80;
@@ -1041,23 +1034,23 @@ body.call-bomber-modal-open {
   transition: opacity 180ms ease;
 }
 
-.call-progress-modal.is-open {
+.progress-modal.is-open {
   opacity: 1;
   pointer-events: auto;
 }
 
-.call-progress-modal[hidden] {
+.progress-modal[hidden] {
   display: none;
 }
 
-.call-progress-modal__backdrop {
+.progress-modal__backdrop {
   position: absolute;
   inset: 0;
   background: rgba(17, 24, 33, 0.68);
   backdrop-filter: blur(12px);
 }
 
-.call-progress-modal__dialog {
+.progress-modal__dialog {
   position: relative;
   display: grid;
   gap: 1.15rem;
@@ -1072,7 +1065,7 @@ body.call-bomber-modal-open {
   box-shadow: var(--shadow);
 }
 
-.call-progress-modal__media {
+.progress-modal__media {
   display: grid;
   place-items: center;
   min-height: 12rem;
@@ -1082,20 +1075,19 @@ body.call-bomber-modal-open {
   background: rgba(255, 255, 255, 0.07);
 }
 
-.call-progress-modal__media img {
+.progress-modal__media img {
   width: min(100%, 18rem);
   max-height: 14rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
-.call-progress-modal__stats {
+.progress-modal__stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.9rem;
 }
 
-.call-progress-modal__stat {
+.progress-modal__stat {
   display: grid;
   gap: 0.45rem;
   min-height: 7rem;
@@ -1105,7 +1097,7 @@ body.call-bomber-modal-open {
   background: rgba(255, 255, 255, 0.08);
 }
 
-.call-progress-modal__label {
+.progress-modal__label {
   color: rgba(254, 248, 241, 0.72);
   font-size: 0.86rem;
   font-weight: 700;
@@ -1113,17 +1105,40 @@ body.call-bomber-modal-open {
   text-transform: uppercase;
 }
 
-.call-progress-modal__value {
+.progress-modal__value {
   font-size: clamp(2rem, 8vw, 3rem);
   font-weight: 700;
   line-height: 1;
 }
 
-.call-progress-modal__close {
+.progress-modal__close {
   width: 100%;
 }
 
-.call-progress-modal__premium {
+.progress-modal__encrypted {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.progress-modal__encrypted code {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 0.9rem;
+  overflow-wrap: anywhere;
+  border-radius: var(--radius-sm);
+  color: #fff8ef;
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.progress-modal__encrypted.is-error code {
+  color: #ffe0d6;
+}
+
+.progress-modal__premium {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
@@ -1134,23 +1149,23 @@ body.call-bomber-modal-open {
   background: linear-gradient(135deg, rgba(245, 217, 150, 0.18), rgba(197, 103, 52, 0.08)), rgba(255, 255, 255, 0.07);
 }
 
-.call-progress-modal__premium h3 {
+.progress-modal__premium h3 {
   margin: 0;
   font-size: 1.08rem;
 }
 
-.call-progress-modal__premium p {
+.progress-modal__premium p {
   margin: 0.35rem 0 0;
   color: rgba(254, 248, 241, 0.74);
   line-height: 1.55;
 }
 
-.call-progress-modal__premium-button {
+.progress-modal__premium-button {
   min-height: 46px;
   padding-inline: 1.1rem;
 }
 
-.call-progress-modal .visually-hidden {
+.progress-modal .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1161,29 +1176,29 @@ body.call-bomber-modal-open {
   border: 0;
 }
 
-html[data-theme=dark] .call-progress-modal__backdrop {
+html[data-theme=dark] .progress-modal__backdrop {
   background: rgba(3, 8, 14, 0.78);
 }
 
 @media (max-width: 520px) {
-  .call-progress-modal {
+  .progress-modal {
     align-items: end;
     padding: 0.75rem;
   }
-  .call-progress-modal__dialog {
+  .progress-modal__dialog {
     width: 100%;
     border-radius: var(--radius-lg);
   }
-  .call-progress-modal__stats {
+  .progress-modal__stats {
     grid-template-columns: 1fr;
   }
-  .call-progress-modal__premium {
+  .progress-modal__premium {
     grid-template-columns: 1fr;
   }
-  .call-progress-modal__premium-button {
+  .progress-modal__premium-button {
     width: 100%;
   }
-  .call-progress-modal__media {
+  .progress-modal__media {
     min-height: 10rem;
   }
 }
@@ -1208,7 +1223,6 @@ html[data-theme=dark] .call-progress-modal__backdrop {
 .legal-kicker {
   display: inline-flex;
   align-items: center;
-  width: -moz-fit-content;
   width: fit-content;
   min-height: 42px;
   padding: 0.65rem 1rem;
@@ -1273,7 +1287,6 @@ html[data-theme=dark] .call-progress-modal__backdrop {
   padding: 1.4rem;
   position: sticky;
   top: 6.5rem;
-  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -2144,8 +2157,7 @@ html[data-theme=dark] .call-progress-modal__backdrop {
 .donation-gallery-image {
   width: 100%;
   aspect-ratio: 4/3;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: transform 260ms ease;
 }
 
@@ -2265,8 +2277,7 @@ html[data-theme=dark] .call-progress-modal__backdrop {
 .donation-modal-image {
   width: 100%;
   border-radius: calc(var(--radius-lg) + 2px);
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   background: rgba(255, 255, 255, 0.04);
 }
 

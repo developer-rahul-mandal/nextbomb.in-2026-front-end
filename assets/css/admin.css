@@ -1,5 +1,3 @@
-/* Compiled from assets/scss/admin.scss. */
-
 .admin-main {
   display: grid;
   gap: 2rem;
@@ -212,7 +210,7 @@
 }
 
 .admin-field-full {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
 }
 
 .admin-field label,
@@ -240,7 +238,7 @@
 }
 
 .admin-login-wrap {
-  width: min(520px, calc(100% - 2rem));
+  width: min(520px, 100% - 2rem);
   margin: 4rem auto;
 }
 
@@ -277,34 +275,34 @@
   padding: 0 1.1rem 1.1rem;
 }
 
-html[data-theme="dark"] .admin-tab,
-html[data-theme="dark"] .admin-field input,
-html[data-theme="dark"] .admin-field textarea,
-html[data-theme="dark"] .admin-field select,
-html[data-theme="dark"] .admin-login-form input,
-html[data-theme="dark"] .admin-comment-form select {
+html[data-theme=dark] .admin-tab,
+html[data-theme=dark] .admin-field input,
+html[data-theme=dark] .admin-field textarea,
+html[data-theme=dark] .admin-field select,
+html[data-theme=dark] .admin-login-form input,
+html[data-theme=dark] .admin-comment-form select {
   color: var(--text);
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.12);
 }
 
-html[data-theme="dark"] .nav-link-active {
+html[data-theme=dark] .nav-link-active {
   color: var(--text);
   background: rgba(255, 255, 255, 0.14);
   border-color: rgba(255, 154, 90, 0.28);
 }
 
-html[data-theme="dark"] .admin-stat-card,
-html[data-theme="dark"] .admin-card,
-html[data-theme="dark"] .admin-login-card,
-html[data-theme="dark"] .admin-editor-block {
+html[data-theme=dark] .admin-stat-card,
+html[data-theme=dark] .admin-card,
+html[data-theme=dark] .admin-login-card,
+html[data-theme=dark] .admin-editor-block {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.1);
   box-shadow: none;
 }
 
-html[data-theme="dark"] .admin-table th,
-html[data-theme="dark"] .admin-table td {
+html[data-theme=dark] .admin-table th,
+html[data-theme=dark] .admin-table td {
   border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
@@ -316,7 +314,6 @@ html[data-theme="dark"] .admin-table td {
     grid-template-columns: 1fr 1fr;
   }
 }
-
 @media (max-width: 767px) {
   .admin-stat-grid,
   .admin-grid,
@@ -324,14 +321,12 @@ html[data-theme="dark"] .admin-table td {
   .admin-settings-grid {
     grid-template-columns: 1fr;
   }
-
   .admin-topbar,
   .admin-actions,
   .admin-tabs,
   .admin-inline-actions {
     align-items: stretch;
   }
-
   .admin-table {
     min-width: 620px;
   }

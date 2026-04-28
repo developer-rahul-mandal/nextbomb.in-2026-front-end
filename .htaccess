@@ -1,10 +1,10 @@
 DirectoryIndex index.html index.php
 Options -MultiViews
 
-ErrorDocument 403 /403.html
-ErrorDocument 404 /404.html
-ErrorDocument 500 /500.html
-ErrorDocument 503 /503.html
+ErrorDocument 403 /403
+ErrorDocument 404 /404
+ErrorDocument 500 /500
+ErrorDocument 503 /503
 
 <IfModule mod_mime.c>
   AddType application/manifest+json .webmanifest
@@ -21,11 +21,22 @@ ErrorDocument 503 /503.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # One-time dynamic encryption route used by the call modal.
+  RewriteRule ^api/enc/([A-Za-z0-9_-]{32,64})/?$ api/enc/index.php?token=$1 [L,QSA]
+
+  # Redirect direct .html and .php access for root pages to clean URLs like /tools.
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^([^/]+)\.(html|php)/?$ /$1 [R=301,L]
+
   # Allow clean root routes like /tools and /whatsapp-bomber.
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^([^/]+)/?$ $1.html [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+  RewriteRule ^([^/]+)/?$ $1.php [L]
 
   # Return a proper 404 so Apache serves the custom 404 page.
   RewriteCond %{REQUEST_FILENAME} !-f
